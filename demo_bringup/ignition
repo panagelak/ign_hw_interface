@@ -1,0 +1,10 @@
+https://ignitionrobotics.org/docs/edifice/ros_integration
+
+#camera test
+roscore
+ign gazebo -r camera_sensor.sdf
+ign topic -l | grep "^/camera"
+rosrun ros_ign_bridge parameter_bridge /camera@sensor_msgs/Image@ignition.msgs.Image
+rqt_image_view /camera
+
+ign topic -e -t /

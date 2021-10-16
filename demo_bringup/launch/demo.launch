@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!--Robot-->
+  <arg name="robot_name" default="ur10" doc="The Robot to launch for"/>
+
+  <arg name="ns" default="/"/>
+  <!-- With Hardware-->
+  <arg name="hardware" default="true" doc="Set false to tune the robot" />
+  <!-- With MoveIt-->
+  <arg name="moveit" default="false" doc="Will launch Move Group" />
+  <arg name="moveit_servo" default="false" doc="Will launch MoveIt Servo Server interface" />
+  <!-- With RViz-->
+  <arg name="rviz" default="false" doc="Will launch RViz" />
+  <arg name="rviz_config" default="moveit" doc="RViz configuration"/> 
+  
+  <!--Ignition parameters-->
+  <arg name="world" default="empty_world" doc="Gazebo Ignition world filename (without .sdf suffix)" />
+  <arg name="ign_args" default=""/>
+
+  <!--load ur10 ign robot description-->
+  <include file="$(find ur10_ign_description)/launch/ur10_upload.launch">
+    <arg name="limited" value="true"/>
+  </include>
+
+  <!-- startup ignition gazebo -->
+  <include file="$(find ros_ign_gazebo)/launch/ign_gazebo.launch">
+    <arg name="ign_args" value="-r -v 3 $(find demo_bringup)/worlds/$(arg world).sdf"/>
+  </include>
+
+  <!--spawn robot to ignition-->
+  <node
+    pkg="ros_ign_gazebo"
+    type="create"
+    name="$(anon ros_ign_create_sphere)"
+    output="screen"
+    args="-world $(arg world) -param robot_description -name $(arg robot_name) -allow_renaming true -z 0.0">
+  </node>
+
+  <!--Ignition bridge-->
+  <node
+    pkg="ros_ign_bridge"
+    type="parameter_bridge"
+    name="ros_ign_bridge"
+    args="/world/empty_world/model/ur10/joint_state@sensor_msgs/JointState[ignition.msgs.Model
+          /model/ur10/joint/shoulder_pan_joint/0/cmd_pos@std_msgs/Float64]ignition.msgs.Double
+          /model/ur10/joint/shoulder_lift_joint/0/cmd_pos@std_msgs/Float64]ignition.msgs.Double
+          /model/ur10/joint/elbow_joint/0/cmd_pos@std_msgs/Float64]ignition.msgs.Double
+          /model/ur10/joint/wrist_1_joint/0/cmd_pos@std_msgs/Float64]ignition.msgs.Double
+          /model/ur10/joint/wrist_2_joint/0/cmd_pos@std_msgs/Float64]ignition.msgs.Double
+          /model/ur10/joint/wrist_3_joint/0/cmd_pos@std_msgs/Float64]ignition.msgs.Double">
+    <remap from="/world/empty_world/model/ur10/joint_state" to="joint_states_ign"/>
+    <remap from="/model/ur10/joint/shoulder_pan_joint/0/cmd_pos" to="cmd_shoulder_pan_joint"/>
+    <remap from="/model/ur10/joint/shoulder_lift_joint/0/cmd_pos" to="cmd_shoulder_lift_joint"/>
+    <remap from="/model/ur10/joint/elbow_joint/0/cmd_pos" to="cmd_elbow_joint"/>
+    <remap from="/model/ur10/joint/wrist_1_joint/0/cmd_pos" to="cmd_wrist_1_joint"/>
+    <remap from="/model/ur10/joint/wrist_2_joint/0/cmd_pos" to="cmd_wrist_2_joint"/>
+    <remap from="/model/ur10/joint/wrist_3_joint/0/cmd_pos" to="cmd_wrist_3_joint"/>
+  </node>
+
+
+
+  <!--!!! ros control !!!-->
+  <group if="$(arg hardware)">
+    <!-- load driver configuration -->
+    <rosparam file="$(find demo_bringup)/config/driver/driver.yaml" command="load"/>
+    
+    <!-- Robot state publisher -->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" type="string" value="" />
+    </node>
+    
+    <!-- hardware interface node -->
+    <node name="ign_hw_interface" 
+          pkg="ignition_hw_interface" 
+          type="ign_hardware_interface_node" 
+          output="screen"/>
+
+    <!-- spawn default controllers -->
+    <node name="robot_controller_spawner" 
+          pkg="controller_manager" 
+          type="controller_manager" 
+          respawn="false" output="screen"
+          args="spawn 
+            joint_state_controller
+            pos_joint_traj_controller" />
+          
+
+    <!-- load other controllers -->
+    <node name="robot_controller_loader" 
+          pkg="controller_manager" 
+          type="controller_manager" 
+          respawn="false" output="screen" 
+          args="load 
+            arm_jog_controller" />
+  </group>
+
+  <!-- Move Group -->
+  <group if="$(arg moveit)">
+    
+    <!-- Move group -->
+    <include file="$(find ur10_moveit_config)/launch/move_group.launch">
+      <arg name="publish_monitored_planning_scene" value="true" />
+      <arg name="allow_trajectory_execution" value="true"/>
+      <arg name="info" value="true"/>
+      <arg name="load_robot_description" value="false" />
+    </include>
+
+  </group>
+
+  <!--MoveIt Servo-->
+  <group if="$(arg moveit_servo)">
+    <include file="$(find demo_bringup)/launch/moveit_servo/moveit_servo.launch" />
+  </group>
+
+  <!--RViz-->
+  <group if="$(arg rviz)">
+    <include file="$(find demo_bringup)/launch/rviz.launch">
+      <arg name="ns" value="/"/>
+      <arg name="config" value="$(arg rviz_config)"/>
+    </include>
+  </group>
+
+</launch>

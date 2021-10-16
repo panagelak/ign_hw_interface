@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="ns" default="/" />
+  <arg name="config" default="basic"/>
+  <group ns="$(arg ns)"> 
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find demo_bringup)/rviz/$(arg config).rviz" />
+  </group>
+
+</launch>

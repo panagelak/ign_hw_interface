@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="458px" preserveAspectRatio="none" style="width:654px;height:458px;background:#FFFFFF;" version="1.1" viewBox="0 0 654 458" width="654px" zoomAndPan="magnify"><defs><filter height="300%" id="f12pc6ynhubu3j" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[c5fe073bede82201872205dfa810e54c]
+cluster gnHW--><polygon fill="#FFFFFF" filter="url(#f12pc6ynhubu3j)" points="16,6,238,6,245,28.2969,402.5,28.2969,402.5,252,16,252,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="245" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="216" x="20" y="20.9951">Ignition Hardware Interface</text><!--MD5=[e5b63ed62a8b9e6707f6253ff8b6a62f]
+cluster gnDriver--><polygon fill="#FFFFFF" filter="url(#f12pc6ynhubu3j)" points="453,233,573,233,580,255.2969,637,255.2969,637,358,453,358,453,233" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="453" x2="580" y1="255.2969" y2="255.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="114" x="457" y="247.9951">Ignition bridge</text><!--MD5=[cd20bbf3fe5f1110a3a076f232417c16]
+cluster ignPlugins--><polygon fill="#FFFFFF" filter="url(#f12pc6ynhubu3j)" points="195,284,321,284,328,306.2969,421,306.2969,421,444,195,444,195,284" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="195" x2="328" y1="306.2969" y2="306.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="120" x="199" y="298.9951">Ignition plugins</text><!--MD5=[fd7dac2faad43e40ffe49d2ad4b1592a]
+class base--><rect codeLine="7" fill="#FEFECE" filter="url(#f12pc6ynhubu3j)" height="86.4141" id="base" style="stroke:#A80036;stroke-width:1.5;" width="101" x="45" y="150"/><ellipse cx="68.1" cy="166" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M68.2094,161.3438 L67.0531,166.4219 L69.3813,166.4219 L68.2094,161.3438 Z M66.725,159.1094 L69.7094,159.1094 L73.0688,171.5 L70.6156,171.5 L69.85,168.4375 L66.5688,168.4375 L65.8188,171.5 L63.3812,171.5 L66.725,159.1094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="83.9" y="170.1543">HWBase</text><line style="stroke:#A80036;stroke-width:1.5;" x1="46" x2="145" y1="182" y2="182"/><line style="stroke:#A80036;stroke-width:1.5;" x1="46" x2="145" y1="190" y2="190"/><ellipse cx="56" cy="201" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="65" y="204.2104">virtual read()</text><ellipse cx="56" cy="213.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="47" x="65" y="217.0151">update()</text><ellipse cx="56" cy="226.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="65" y="229.8198">virtual write()</text><!--MD5=[d9847530b5dea828dbcbb50914b76f30]
+class interface--><rect codeLine="12" fill="#FEFECE" filter="url(#f12pc6ynhubu3j)" height="73.6094" id="interface" style="stroke:#A80036;stroke-width:1.5;" width="157" x="229.5" y="156"/><ellipse cx="244.5" cy="172" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M240.4219,167.7656 L240.4219,165.6094 L247.8125,165.6094 L247.8125,167.7656 L245.3438,167.7656 L245.3438,175.8438 L247.8125,175.8438 L247.8125,178 L240.4219,178 L240.4219,175.8438 L242.8906,175.8438 L242.8906,167.7656 L240.4219,167.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="125" x="258.5" y="176.1543">IgnitionHWInterface</text><line style="stroke:#A80036;stroke-width:1.5;" x1="230.5" x2="385.5" y1="188" y2="188"/><line style="stroke:#A80036;stroke-width:1.5;" x1="230.5" x2="385.5" y1="196" y2="196"/><ellipse cx="240.5" cy="207" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="34" x="249.5" y="210.2104">read()</text><ellipse cx="240.5" cy="219.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="249.5" y="223.0151">write()</text><!--MD5=[6038825c87d185e630bae6934cf34074]
+class cloop--><rect codeLine="16" fill="#FEFECE" filter="url(#f12pc6ynhubu3j)" height="73.6094" id="cloop" style="stroke:#A80036;stroke-width:1.5;" width="127" x="32" y="41"/><ellipse cx="47" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M49.9688,62.6406 Q49.3906,62.9375 48.75,63.0781 Q48.1094,63.2344 47.4063,63.2344 Q44.9063,63.2344 43.5781,61.5938 Q42.2656,59.9375 42.2656,56.8125 Q42.2656,53.6875 43.5781,52.0313 Q44.9063,50.375 47.4063,50.375 Q48.1094,50.375 48.75,50.5313 Q49.4063,50.6875 49.9688,50.9844 L49.9688,53.7031 Q49.3438,53.125 48.75,52.8594 Q48.1563,52.5781 47.5313,52.5781 Q46.1875,52.5781 45.5,53.6563 Q44.8125,54.7188 44.8125,56.8125 Q44.8125,58.9063 45.5,59.9844 Q46.1875,61.0469 47.5313,61.0469 Q48.1563,61.0469 48.75,60.7813 Q49.3438,60.5 49.9688,59.9219 L49.9688,62.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="95" x="61" y="61.1543">HWControlLoop</text><line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="158" y1="73" y2="73"/><line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="158" y1="81" y2="81"/><ellipse cx="43" cy="92" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="27" x="52" y="95.2104">run()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="40" y="101.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="47" x="52" y="108.0151">update()</text><!--MD5=[bc9b08118bad89237204b13147f58b86]
+class ignBridge--><rect codeLine="23" fill="#FEFECE" filter="url(#f12pc6ynhubu3j)" height="73.6094" id="ignBridge" style="stroke:#A80036;stroke-width:1.5;" width="152" x="469" y="268"/><ellipse cx="484" cy="284" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M486.9688,289.6406 Q486.3906,289.9375 485.75,290.0781 Q485.1094,290.2344 484.4063,290.2344 Q481.9063,290.2344 480.5781,288.5938 Q479.2656,286.9375 479.2656,283.8125 Q479.2656,280.6875 480.5781,279.0313 Q481.9063,277.375 484.4063,277.375 Q485.1094,277.375 485.75,277.5313 Q486.4063,277.6875 486.9688,277.9844 L486.9688,280.7031 Q486.3438,280.125 485.75,279.8594 Q485.1563,279.5781 484.5313,279.5781 Q483.1875,279.5781 482.5,280.6563 Q481.8125,281.7188 481.8125,283.8125 Q481.8125,285.9063 482.5,286.9844 Q483.1875,288.0469 484.5313,288.0469 Q485.1563,288.0469 485.75,287.7813 Q486.3438,287.5 486.9688,286.9219 L486.9688,289.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="120" x="498" y="288.1543">Ros Topic Interface</text><line style="stroke:#A80036;stroke-width:1.5;" x1="470" x2="620" y1="300" y2="300"/><line style="stroke:#A80036;stroke-width:1.5;" x1="470" x2="620" y1="308" y2="308"/><ellipse cx="480" cy="319" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="489" y="322.2104">pubJointStates()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="477" y="328.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="489" y="335.0151">cmdJoint() x6</text><!--MD5=[4792a4043fcb06e9db8b79e36313b38c]
+class ign_plugins--><rect codeLine="30" fill="#FEFECE" filter="url(#f12pc6ynhubu3j)" height="73.6094" id="ign_plugins" style="stroke:#A80036;stroke-width:1.5;" width="178" x="219" y="327"/><ellipse cx="257.4" cy="343" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M257.5094,338.3438 L256.3531,343.4219 L258.6813,343.4219 L257.5094,338.3438 Z M256.025,336.1094 L259.0094,336.1094 L262.3688,348.5 L259.9156,348.5 L259.15,345.4375 L255.8687,345.4375 L255.1187,348.5 L252.6812,348.5 L256.025,336.1094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="94" x="276.6" y="347.1543">ignition plugins</text><line style="stroke:#A80036;stroke-width:1.5;" x1="220" x2="396" y1="359" y2="359"/><ellipse cx="230" cy="370" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="114" x="239" y="373.2104">joint-state-publisher</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="227" y="379.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="152" x="239" y="386.0151">joint-position-controller x 6</text><line style="stroke:#A80036;stroke-width:1.5;" x1="220" x2="396" y1="392.6094" y2="392.6094"/><!--MD5=[6fb2d8fd65db62ebd553f9635d5560b6]
+link base to interface--><path codeLine="41" d="M161.25,193 C177.96,193 196.29,193 214.14,193 " fill="none" id="base-interface" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="229.31,193,220.31,189,224.31,193,220.31,197,229.31,193" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="224.31" x2="214.31" y1="193" y2="193"/><ellipse cx="154.12" cy="193" fill="#FFFFFF" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="162.12" x2="146.12" y1="193" y2="193"/><line style="stroke:#A80036;stroke-width:1.0;" x1="154.12" x2="154.12" y1="201" y2="185"/><!--MD5=[b938278555d0712d7465b64726ce3f5d]
+reverse link cloop to interface--><path codeLine="42" d="M163.56,114.63 C187.7,127.82 214.94,142.71 239.15,155.93 " fill="none" id="cloop-backto-interface" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="159.09,112.19,165.0952,119.9962,163.4855,114.5733,168.9084,112.9635,159.09,112.19" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b5e5e655014ff99307ae85013b372bc7]
+link interface to ignBridge--><path codeLine="45" d="M386.6,217.2 C418.83,231.36 455.61,249.2 485.51,265.27 " fill="none" id="interface-to-ignBridge" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="490.25,267.83,484.2448,260.0238,485.8545,265.4467,480.4316,267.0565,490.25,267.83" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f8dccef13f1d926fc10db1b379e31816]
+link ignBridge to interface--><path codeLine="46" d="M468.61,281.06 C436.12,266.8 398.69,248.7 368.24,232.47 " fill="none" id="ignBridge-to-interface" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="363.8,230.09,369.8549,237.8578,368.2106,232.4452,373.6232,230.8008,363.8,230.09" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f42c2f4a85cb7522a08d12fd26a91e5c]
+link ignBridge to ignPlugins--><path codeLine="48" d="M497.4698,350.8505 C497.4698,350.8505 459.47,387.37 437,399 C433.8331,400.64 430.5668,402.1496 427.2255,403.5431 C425.5549,404.2398 423.8655,404.9075 422.1605,405.5479 C421.9474,405.6279 421.734,405.7076 421.5204,405.7868 " fill="none" id="ignBridge-ignPlugins" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="421.5204,405.7868,431.3496,406.4085,426.2085,404.0486,428.5685,398.9075,421.5204,405.7868" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="505.66,342.08,498.6414,343.7352,497.4698,350.8505,504.4884,349.1953,505.66,342.08" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[46e65f2216db463c906b49100920a5c4]
+link ignPlugins to ignBridge--><path codeLine="49" d="M315.7552,444.0463 C315.7552,444.0463 316.5188,444.4403 316.9214,444.6322 C318.5316,445.3997 320.3609,446.1125 322.385,446.7645 C330.4813,449.3728 341.6925,451.0106 354.45,451.3063 C379.965,451.8975 411.665,447.12 437,434 C474.56,414.55 506.35,376.73 525.29,346.51 " fill="none" id="ignPlugins-ignBridge" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="527.99,342.11,519.8717,347.6861,525.3735,346.3707,526.6889,351.8725,527.99,342.11" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="315.7552,444.0463,319.183,450.3906,326.3577,449.6666,322.9299,443.3223,315.7552,444.0463" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1cbd581964e91e245e089792bb5f421c]
+@startuml driver_diagram
+skinparam componentStyle uml2
+skinparam defaultTextAlignment center
+
+left to right direction
+
+package "Ignition Hardware Interface" as gnHW <<Folder>> {
+  abstract class  "HWBase" as base{
+      +virtual read()
+      +update()
+      +virtual write()
+  }
+  interface  "IgnitionHWInterface" as interface{
+      +read()
+      +write()
+  }
+  class      "HWControlLoop" as cloop{
+      +run()
+      -update()
+  }
+}
+
+package "Ignition bridge" as gnDriver <<Folder>> {
+  class "Ros Topic Interface" as ignBridge{
+  +pubJointStates()
+  -cmdJoint() x6
+  }
+}
+
+package "Ignition plugins" as ignPlugins <<Folder>> {
+  abstract class  "ignition plugins" as ign_plugins{
+      +joint-state-publisher
+      -joint-position-controller x 6 
+  }
+}
+
+
+
+' Connections between classes
+
+' Inside ignition hardware
+base  +- -> interface
+interface -up-> cloop
+
+' Hardware Interface to ignBridge
+interface - -> ignBridge
+ignBridge - -> interface
+' ignBridge TO ignPlugins
+ignBridge *- -> ignPlugins
+ignPlugins *- -> ignBridge
+
+@enduml
+
+@startuml driver_diagram
+skinparam componentStyle uml2
+skinparam defaultTextAlignment center
+
+left to right direction
+
+package "Ignition Hardware Interface" as gnHW <<Folder>> {
+  abstract class  "HWBase" as base{
+      +virtual read()
+      +update()
+      +virtual write()
+  }
+  interface  "IgnitionHWInterface" as interface{
+      +read()
+      +write()
+  }
+  class      "HWControlLoop" as cloop{
+      +run()
+      -update()
+  }
+}
+
+package "Ignition bridge" as gnDriver <<Folder>> {
+  class "Ros Topic Interface" as ignBridge{
+  +pubJointStates()
+  -cmdJoint() x6
+  }
+}
+
+package "Ignition plugins" as ignPlugins <<Folder>> {
+  abstract class  "ignition plugins" as ign_plugins{
+      +joint-state-publisher
+      -joint-position-controller x 6 
+  }
+}
+
+
+
+
+base  +- -> interface
+interface -up-> cloop
+
+interface - -> ignBridge
+ignBridge - -> interface
+ignBridge *- -> ignPlugins
+ignPlugins *- -> ignBridge
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

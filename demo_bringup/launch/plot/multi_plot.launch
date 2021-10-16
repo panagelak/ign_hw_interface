@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<launch>
+
+<arg name="joint1" default="true"/>
+<arg name="joint2" default="true"/>
+<arg name="joint3" default="true"/>
+<arg name="joint4" default="true"/>
+<arg name="joint5" default="true"/>
+<arg name="joint6" default="true"/>
+
+<group if="$(arg joint1)">
+  <node name="rqt_multiplot_x" 
+        pkg="rqt_multiplot" 
+        type="rqt_multiplot" 
+        output="screen"
+        args = "--multiplot-config $(find demo_bringup)/config/plot_config/rqt_multiplot_j1.xml --force-discover"/>
+</group>
+
+<group if="$(arg joint2)">
+  <node name="rqt_multiplot_y" 
+        pkg="rqt_multiplot" 
+        type="rqt_multiplot" 
+        output="screen"
+        args = "--multiplot-config $(find demo_bringup)/config/plot_config/rqt_multiplot_j2.xml --force-discover"/>
+</group>
+
+<group if="$(arg joint3)">
+  <node name="rqt_multiplot_z" 
+        pkg="rqt_multiplot" 
+        type="rqt_multiplot" 
+        output="screen"
+        args = "--multiplot-config $(find demo_bringup)/config/plot_config/rqt_multiplot_j3.xml --force-discover"/>
+</group>
+
+<group if="$(arg joint4)">
+  <node name="rqt_multiplot_roll" 
+        pkg="rqt_multiplot" 
+        type="rqt_multiplot" 
+        output="screen"
+        args = "--multiplot-config $(find demo_bringup)/config/plot_config/rqt_multiplot_j4.xml --force-discover"/>
+</group>
+
+<group if="$(arg joint5)">
+  <node name="rqt_multiplot_pitch" 
+        pkg="rqt_multiplot" 
+        type="rqt_multiplot" 
+        output="screen"
+        args = "--multiplot-config $(find demo_bringup)/config/plot_config/rqt_multiplot_j5.xml --force-discover"/>
+</group>
+
+<group if="$(arg joint6)">
+  <node name="rqt_multiplot_yaw" 
+        pkg="rqt_multiplot" 
+        type="rqt_multiplot" 
+        output="screen"
+        args = "--multiplot-config $(find demo_bringup)/config/plot_config/rqt_multiplot_j6.xml --force-discover"/>
+</group>
+
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- MoveIt Servo Configuration servo_server namespace -->
+  <rosparam ns="servo_server" command="load" file="$(find demo_bringup)/config/moveit_servo/moveit_servo_config.yaml" />
+  
+  <!-- Servo Server node -->
+  <node name="servo_server" pkg="moveit_servo" type="servo_server" output="screen" >
+    <param name="parameter_ns" type="string" value="" />
+  </node>
+
+</launch>

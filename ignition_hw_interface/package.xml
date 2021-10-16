@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ignition_hw_interface</name>
+  <version>1.0.3</version>
+
+  <description>The Ignition Hardware Interface package </description>
+
+  <maintainer email="gkournelos@lms.mech.upatras.gr">Christos Gkournelos</maintainer>
+  <maintainer email="angelakis@lms.mech.upatras.gr">Panagiotis Angelakis</maintainer>
+  <maintainer email="gkrizis@lms.mech.upatras.gr">Christos Gkrizis</maintainer>
+
+  <author>Christos Gkournelos</author>
+  <author>Panagiotis Angelakis</author>
+  <author>Christos Gkrizis</author>
+
+  <license>BSD-2-Clause</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>boost</build_depend>
+  
+  <depend>roscpp</depend>
+  <depend>hardware_interface</depend>
+  <depend>controller_manager</depend>
+  <depend>rosparam_shortcuts</depend>
+  <depend>tf2_ros</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+
+  <exec_depend>joint_state_controller</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+
+
+  <export>
+  </export>
+
+</package>

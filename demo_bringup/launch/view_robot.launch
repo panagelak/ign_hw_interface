@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="with_state_publisher" default="true" doc="If this is true it will start the joint state publisher gui and the robot state publisher"/>
+  
+  <!--load robot description-->
+  <include file="$(find ur10_ign_description)/launch/ur10_upload.launch"/>
+
+  <group if="$(arg with_state_publisher)">
+    <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  </group>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find demo_bringup)/rviz/view_robot.rviz" required="true" />
+
+</launch>

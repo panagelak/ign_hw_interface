@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>demo_bringup</name>
+  <version>1.0.3</version>
+  <description>Demo launch files and nodes to use the Ignition Hardware Interface</description>
+
+  <maintainer email="gkournelos@lms.mech.upatras.gr">Christos Gkournelos</maintainer>
+  <maintainer email="angelakis@lms.mech.upatras.gr">Panagiotis Angelakis</maintainer>
+  <maintainer email="gkrizis@lms.mech.upatras.gr">Christos Gkrizis</maintainer>
+
+  <author>Christos Gkournelos</author>
+  <author>Panagiotis Angelakis</author>
+  <author>Christos Gkrizis</author>
+
+  <license>BSD-2-Clause</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>joint_state_controller</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
+  <exec_depend>position_controllers</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rostopic</exec_depend>
+  <exec_depend>ros_ign_bridge</exec_depend>
+  <exec_depend>moveit_servo</exec_depend>
+
+  <exec_depend>rqt_joint_trajectory_controller</exec_depend>
+  <exec_depend>rqt_multiplot</exec_depend>
+  <exec_depend>ur10_ign_description</exec_depend>
+
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>actionlib</depend>
+  <depend>control_msgs</depend>
+
+  <export>
+  </export>
+</package>
