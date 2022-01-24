@@ -1,8 +1,11 @@
 # Ignition hardware interface
 
-## Collaborators
+## Contributors
+
+[Panagiotis Angelakis](https://github.com/panagelak)
 
 [Christos Gkournelos](https://github.com/cgkournelos)
+
 ## Overview
 
 Currently there is no ros control plugin for ignition gazebo, resulting in most implementations using the ignition trajectory plugin along with custom moveit action servers to implement the *follow_joint_trajectory*, omitting the dynamic nature of ros control.
